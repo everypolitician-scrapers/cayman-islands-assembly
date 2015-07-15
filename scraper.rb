@@ -37,11 +37,11 @@ def scrape_list(url)
       image: ul.css('img/@src').first.text,
       constituency: mp.text[/ember for (.*)/, 1].strip,
       party: ul.xpath('./preceding::h4[1]').text.strip,
-      # term: term_from(tds[0].text.strip),
-      # source: url,
+      term: '2013',
+      source: url,
     }
     puts data
-    # ScraperWiki.save_sqlite([:id, :term], mem)
+    ScraperWiki.save_sqlite([:id, :term], mem)
   end
 end
 
