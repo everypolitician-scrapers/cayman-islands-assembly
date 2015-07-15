@@ -31,6 +31,7 @@ def scrape_list(url)
     prefix, name = name.split(' ', 2)
 
     data = { 
+      id: mp.css('a/@href').text.split('/').last,
       name: name.strip,
       honorific_prefix: prefix.strip,
       honorific_suffix: suffix.to_s.strip,
@@ -40,6 +41,18 @@ def scrape_list(url)
       term: '2013',
       source: url,
     }
+    if data[:party] =~ /Progressive Movement/
+      data[:party] = "People’s Progressive Movement"
+      data[:party_id] = "PPM"
+    elsif data[:party] =~ /Independent/
+      data[:party] = "Independent"
+      data[:party_id] = "IND"
+    elsif data[:party] =~ /United Democratic/
+      data[:party] = "United Democratic Party"
+      data[:party_id] = "UDP"
+    else
+      warn "Unknown party: #{data[:party]}"
+    end
     puts data
     ScraperWiki.save_sqlite([:name, :term], data)
   end
