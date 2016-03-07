@@ -53,7 +53,7 @@ def scrape_list(url)
     else
       warn "Unknown party: #{data[:party]}"
     end
-    puts data
+    # puts data
     ScraperWiki.save_sqlite([:name, :term], data)
   end
 end
