@@ -1,0 +1,49 @@
+---
+request:
+  method: get
+  uri: http://www.legislativeassembly.ky/portal/page?_dad=portal&_pageid=4242,7282402&_schema=PORTAL
+  body:
+    encoding: US-ASCII
+    string: ''
+  headers:
+    Accept-Encoding:
+    - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+    Accept:
+    - "*/*"
+    User-Agent:
+    - Ruby
+response:
+  status:
+    code: 302
+    message: Moved Temporarily
+  headers:
+    Date:
+    - Sun, 08 Jan 2017 08:15:45 GMT
+    Location:
+    - http://www.legislativeassembly.ky/portal/pls/portal/PORTAL.wwv_main.render_warning_screen?p_oldurl=http%3A%2F%2Fwww.legislativeassembly.ky%2Fportal%2Fpage%3F_pageid%3D4242%2C7282402%26_dad%3Dportal%26_schema%3DPORTAL%26_schema%3DPORTAL&p_newurl=http%3A%2F%2Fwww.legislativeassembly.ky%2Fportal%2Fpage%2Fportal%2Flglhome%2Fmembers%2Felected2009
+    X-Powered-By:
+    - Servlet/2.5 JSP/2.1
+    Content-Type:
+    - text/plain
+    Content-Language:
+    - en
+    Set-Cookie:
+    - portal=11.1+en-us+us+AMERICA+4591921F76674B47E053891F6F0AA4D4+A368D24F38775BCF77F6F2ECBA997ED7302C5504D2AFC4B6329EA6C8208F3DC802CFECBAB259F9620CA819D3186B51BBC38698BB7750F83314EF6B5F4327A9C5143F84A7E3CE18ECD1A464708BE91BD7E79A660A016D2343;
+      path=/
+    - portal=11.1+en-us+us+AMERICA+4591921F76684B47E053891F6F0AA4D4+B59DC35EA3E8344290B69A1011F6AF2EBA3E46B336A988B7B28AE2E72B8DCB685C235A3D4030308F7FBB8D9C320DB02BDB72FA1781B69DF9F9565F09C14CBE3028570C17F3EE38A6B09E8DCCD2A0B3D5A5CC94FD0D1E6FB1;
+      path=/
+    X-Oracle-Dms-Ecid:
+    - 005HP3Rc8WGFw00Fzzx0g00006_50009Cz
+    - 005HP3RcDqnFw00Fzzx0g00006_50009D0
+    - 005HP3RcRBYFw00Fzzx0g00006_50009D1
+    - '897385229502284'
+    Cache-Control:
+    - max-age=0
+    Server:
+    - Oracle-Application-Server-11g Oracle-Web-Cache-11g/11.1.1.6.0 (TM;max-age=2592000+0;age=0;ecid=897385229502284,0:1)
+    Content-Length:
+    - '0'
+  body:
+    encoding: UTF-8
+  http_version: 
+recorded_at: Sun, 08 Jan 2017 08:13:50 GMT
