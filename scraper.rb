@@ -1,15 +1,12 @@
 #!/bin/env ruby
 # encoding: utf-8
 
-require 'scraperwiki'
+require 'date'
 require 'nokogiri'
 require 'open-uri'
-require 'cgi'
-require 'json'
-require 'date'
-require 'colorize'
-
 require 'pry'
+require 'scraperwiki'
+
 require 'open-uri/cached'
 OpenURI::Cache.cache_path = '.cache'
 
@@ -53,7 +50,7 @@ def scrape_list(url)
     else
       warn "Unknown party: #{data[:party]}"
     end
-    # puts data
+    # puts data
     ScraperWiki.save_sqlite([:name, :term], data)
   end
 end
