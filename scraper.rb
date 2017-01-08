@@ -1,5 +1,6 @@
 #!/bin/env ruby
 # encoding: utf-8
+# frozen_string_literal: true
 
 require 'date'
 require 'nokogiri'
@@ -11,7 +12,7 @@ require 'open-uri/cached'
 OpenURI::Cache.cache_path = '.cache'
 
 def noko_for(url)
-  Nokogiri::HTML(open(url).read) 
+  Nokogiri::HTML(open(url).read)
 end
 
 def date_from(str)
@@ -27,31 +28,31 @@ def scrape_list(url)
     name, suffix = fullname.split(',', 2)
     prefix, name = name.split(' ', 2)
 
-    data = { 
-      id: mp.css('a/@href').text.split('/').last,
-      name: name.strip,
+    data = {
+      id:               mp.css('a/@href').text.split('/').last,
+      name:             name.strip,
       honorific_prefix: prefix.strip,
       honorific_suffix: suffix.to_s.strip,
-      image: ul.css('img/@src').first.text,
-      constituency: mp.text[/ember for (.*)/, 1].strip,
-      party: ul.xpath('./preceding::h4[1]').text.strip,
-      term: '2013',
-      source: url,
+      image:            ul.css('img/@src').first.text,
+      constituency:     mp.text[/ember for (.*)/, 1].strip,
+      party:            ul.xpath('./preceding::h4[1]').text.strip,
+      term:             '2013',
+      source:           url,
     }
     if data[:party] =~ /Progressive Movement/
-      data[:party] = "People’s Progressive Movement"
-      data[:party_id] = "PPM"
+      data[:party] = 'People’s Progressive Movement'
+      data[:party_id] = 'PPM'
     elsif data[:party] =~ /Independent/
-      data[:party] = "Independent"
-      data[:party_id] = "IND"
+      data[:party] = 'Independent'
+      data[:party_id] = 'IND'
     elsif data[:party] =~ /United Democratic/
-      data[:party] = "United Democratic Party"
-      data[:party_id] = "UDP"
+      data[:party] = 'United Democratic Party'
+      data[:party_id] = 'UDP'
     else
       warn "Unknown party: #{data[:party]}"
     end
     # puts data
-    ScraperWiki.save_sqlite([:name, :term], data)
+    ScraperWiki.save_sqlite(%i(name term), data)
   end
 end
 
