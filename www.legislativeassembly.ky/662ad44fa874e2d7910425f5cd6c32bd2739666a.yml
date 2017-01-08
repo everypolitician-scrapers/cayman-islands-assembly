@@ -1,0 +1,42 @@
+---
+request:
+  method: get
+  uri: http://www.legislativeassembly.ky/portal/pls/portal/PORTAL.wwv_main.render_warning_screen?p_newurl=http://www.legislativeassembly.ky/portal/page/portal/lglhome/members/elected2009&p_oldurl=http://www.legislativeassembly.ky/portal/page?_pageid=4242,7282402%26_dad=portal%26_schema=PORTAL%26_schema=PORTAL
+  body:
+    encoding: US-ASCII
+    string: ''
+  headers:
+    Accept-Encoding:
+    - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+    Accept:
+    - "*/*"
+    User-Agent:
+    - Ruby
+response:
+  status:
+    code: 200
+    message: OK
+  headers:
+    Date:
+    - Sun, 08 Jan 2017 08:15:46 GMT
+    Cache-Control:
+    - max-age=0
+    X-Powered-By:
+    - Servlet/2.5 JSP/2.1
+    Content-Type:
+    - text/html; charset=ISO-8859-1
+    Content-Language:
+    - en
+    Set-Cookie:
+    - portal=11.1+en-us+us+AMERICA+4591921F76694B47E053891F6F0AA4D4+537978675AFE4F7A3C740FD7CA887DC7F4C515862965FFD3F665DA8753BBCEE041072D462E042433BD8912A4FA541302B56B5198940202BB94738497424C95A68E87C88FA1AEA02F88A8DA28A2C37A17FEE773633644767D;
+      path=/
+    X-Oracle-Dms-Ecid:
+    - '897393819437350'
+    Server:
+    - Oracle-Application-Server-11g Oracle-Web-Cache-11g/11.1.1.6.0 (N;ecid=897393819437350,0:1)
+    Content-Length:
+    - '1508'
+  body:
+    encoding: ASCII-8BIT
+  http_version: 
+recorded_at: Sun, 08 Jan 2017 08:13:51 GMT
